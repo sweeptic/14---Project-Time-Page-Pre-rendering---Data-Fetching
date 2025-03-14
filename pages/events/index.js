@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import {} from 'react';
 import { useRouter } from 'next/router';
 
 import { getAllEvents } from '../../dummy-data';
@@ -11,15 +11,15 @@ function AllEventsPage() {
 
   function findEventsHandler(year, month) {
     const fullPath = `/events/${year}/${month}`;
-    
+
     router.push(fullPath);
   }
 
   return (
-    <Fragment>
+    <>
       <EventsSearch onSearch={findEventsHandler} />
       <EventList items={events} />
-    </Fragment>
+    </>
   );
 }
 
